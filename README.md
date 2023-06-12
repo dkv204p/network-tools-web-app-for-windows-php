@@ -1,36 +1,62 @@
-## Network Tools Web Application
+# Network Tools Documentation
 
-This web application provides a set of network diagnostic tools to assist users in troubleshooting network-related issues. It includes features such as checking the user's IP address, performing ping operations, scanning with Nmap, and discovering network clients.
+This documentation provides an overview of the Network Tools web page, which allows users to perform various network-related tasks such as obtaining their IP address, pinging IP addresses, scanning with Nmap, and discovering clients on the network.
 
-### Requirements
-- PHP (>= 5.6) with Apache or Nginx web server
-- Nmap (for Nmap scanning feature)
-- Internet connectivity for real-time functionality
+## Table of Contents
 
-### Setup Instructions
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Setup Instructions](#setup-instructions)
+- [Usage](#usage)
+- [License](#license)
+
+## Introduction
+
+The Network Tools web page is a collection of utilities that enable users to perform common network tasks conveniently from their browser. It provides a user-friendly interface for tasks like retrieving the local IP address, pinging remote IP addresses, scanning with Nmap, and discovering clients on the network.
+
+## Requirements
+
+To use the Network Tools web page, ensure you have the following:
+
+- A web browser with JavaScript enabled.
+- A web server environment with PHP support (for retrieving the local IP address).
+
+## Setup Instructions
+
+Follow the steps below to set up the Network Tools web page:
+
 1. Clone the repository or download the source code.
-2. Place the files in the web server's document root directory.
-3. Ensure PHP is installed and configured correctly on the server.
-4. Install Nmap on the server if not already installed.
-5. Ensure the server has internet connectivity for real-time functionality.
-6. Access the application through the web browser using the server's URL.
+2. Place the files in your web server's document root directory.
+3. Ensure that PHP is properly configured and enabled on your web server.
+4. Open the web page in your browser by accessing the URL where you placed the files.
 
-### Usage
-1. Open the web application in a web browser.
-2. The "My IP" section will display the user's IP address.
-3. Use the "Ping IP" section to enter an IP address to ping and click the "Ping" button.
-4. The "Nmap Scan" section allows entering a target IP or range to perform an Nmap scan by clicking the "Scan" button.
-5. Click the "Discover Clients" button to initiate the discovery of network clients.
+## Usage
 
-Note: Some features require appropriate permissions and configurations to function correctly.
+The Network Tools web page provides the following functionalities:
 
-### Troubleshooting
-If encountering issues, ensure:
-- The web server and PHP are correctly configured.
-- Nmap is installed and accessible from the server.
-- The server has internet connectivity for real-time functionality.
+### My IP
 
-For further assistance, please refer to the documentation or seek help from the project contributors.
+- Displays the local IP address of the machine running the web page.
 
-### License
-This project is licensed under the [MIT License](LICENSE).
+### Ping IP
+
+- Enter an IP address in the input field.
+- Click the "Ping" button to initiate the ping operation.
+- The result of the ping operation will be displayed below the button.
+
+### Nmap Scan
+
+- Enter a target IP address or range in the input field.
+- Click the "Scan" button to initiate the Nmap scan.
+- The result of the scan will be displayed below the button.
+
+### Discover Clients
+
+- Click the "Discover" button to initiate the process of discovering clients on the network.
+- The result, which includes the list of connected clients, will be displayed below the button.
+
+## License
+
+The Network Tools web page is licensed under the [MIT License](https://opensource.org/licenses/MIT). Please see the [LICENSE](LICENSE) file for more details.
+
+Feel free to modify and customize the code to suit your needs.
