@@ -1,62 +1,88 @@
-# Network Tools Documentation
+# Network Tools
 
-This documentation provides an overview of the Network Tools web page, which allows users to perform various network-related tasks such as obtaining their IP address, pinging IP addresses, scanning with Nmap, and discovering clients on the network.
+This is a web page that provides various network tools.
 
-## Table of Contents
+## Required Software
 
-- [Introduction](#introduction)
-- [Requirements](#requirements)
-- [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
-- [License](#license)
+Before using the Network Tools, ensure that the following software is installed:
 
-## Introduction
+- Web server software (e.g., Apache, Nginx) to host the web page and execute server-side scripts (e.g., PHP).
+- PHP (Hypertext Preprocessor) to handle server-side scripting. The version required may depend on the specific features used in the web page.
+- Nmap (Network Mapper) for performing network scans. Make sure Nmap is installed and accessible from the command line.
+- Tailwind CSS for styling the web page. You can include the Tailwind CSS library using a CDN (Content Delivery Network) or host the CSS file locally.
 
-The Network Tools web page is a collection of utilities that enable users to perform common network tasks conveniently from their browser. It provides a user-friendly interface for tasks like retrieving the local IP address, pinging remote IP addresses, scanning with Nmap, and discovering clients on the network.
+## My IP
 
-## Requirements
+Displays the IP address of the user.
 
-To use the Network Tools web page, ensure you have the following:
+### Usage
 
-- A web browser with JavaScript enabled.
-- A web server environment with PHP support (for retrieving the local IP address).
+No input required.
 
-## Setup Instructions
+## Ping IP
 
-Follow the steps below to set up the Network Tools web page:
+Allows you to ping a specific IP address.
 
-1. Clone the repository or download the source code.
-2. Place the files in your web server's document root directory.
-3. Ensure that PHP is properly configured and enabled on your web server.
-4. Open the web page in your browser by accessing the URL where you placed the files.
+### Usage
 
-## Usage
+1. Enter the IP address you want to ping in the input field.
+2. Click the "Ping" button.
+3. The result of the ping operation will be displayed below the input field.
 
-The Network Tools web page provides the following functionalities:
+#### Troubleshooting
 
-### My IP
+- If you encounter an error message, make sure the IP address you entered is valid and reachable.
+- Check your internet connection to ensure you have an active network connection.
+- If the issue persists, try pinging a different IP address to see if it's specific to the entered IP.
 
-- Displays the local IP address of the machine running the web page.
+## Nmap Scan
 
-### Ping IP
+Performs an Nmap scan on a target IP or range.
 
-- Enter an IP address in the input field.
-- Click the "Ping" button to initiate the ping operation.
-- The result of the ping operation will be displayed below the button.
+### Usage
 
-### Nmap Scan
+1. Enter the target IP or range in the input field.
+2. Select the desired scan type from the dropdown menu.
+3. Click the "Scan" button.
+4. The result of the Nmap scan will be displayed below the input field.
 
-- Enter a target IP address or range in the input field.
-- Click the "Scan" button to initiate the Nmap scan.
-- The result of the scan will be displayed below the button.
+#### Troubleshooting
 
-### Discover Clients
+- Ensure that the target IP or range is valid and accessible from your network.
+- Verify that you have proper permissions to perform an Nmap scan on the target IP or range.
+- If the scan is taking too long or not completing, check your network connectivity and try again.
 
-- Click the "Discover" button to initiate the process of discovering clients on the network.
-- The result, which includes the list of connected clients, will be displayed below the button.
+## Discover Clients
 
-## License
+Discovers clients on the network.
 
-The Network Tools web page is licensed under the [MIT License](https://opensource.org/licenses/MIT). Please see the [LICENSE](LICENSE) file for more details.
+### Usage
 
-Feel free to modify and customize the code to suit your needs.
+Click the "Discover" button.
+The result of the discovery process will be displayed below the button.
+
+#### Troubleshooting
+
+- If the discovery process is not showing any results, ensure that you are connected to the correct network.
+- Check if any firewalls or network security settings are blocking the discovery process.
+- Try restarting your router or network devices if the issue persists.
+
+## Additional Information
+
+This web page uses Tailwind CSS for styling. The CSS file can be found at `assets/css/style.css`.
+
+The following images are used:
+
+- `apple-touch-icon.png` (180x180 pixels)
+- `favicon-32x32.png` (32x32 pixels)
+- `favicon-16x16.png` (16x16 pixels)
+
+The web manifest file is located at `assets/images/site.webmanifest`.
+
+## JavaScript Code
+
+The web page also includes JavaScript code to handle user interactions and perform AJAX requests.
+
+- The `ping-ip-button` element triggers a ping request to the specified IP address.
+- The `nmap-scan-button` element triggers an Nmap scan with the specified IP address and scan type.
+- The `discover-button` element triggers a discovery process.
